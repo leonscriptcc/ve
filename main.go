@@ -14,5 +14,7 @@ func init() {
 }
 
 func main() {
+	//TODO 循环初始化采集点
+	//TODO 启动http监听
 
 }

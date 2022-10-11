@@ -1,5 +1,8 @@
 # Exporter Node 配置文件
 exporters:
-  - {port: "8080",dataSrc: "./data.txt"}
+  -
+    port: "8080"
+    dataSrcs:
+      - "./data.txt"
 
 

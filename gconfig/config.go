@@ -32,8 +32,10 @@ func Load() error {
 
 	// 校验文件是否存在
 	for _, exporter := range Parameters.Exporters {
-		if !gtool.IsExist(exporter.DataSrc) {
-			return errors.New("dataSrc not exist:" + exporter.DataSrc)
+		for _, src := range exporter.DataSrcs {
+			if !gtool.IsExist(src) {
+				return errors.New("dataSrc not exist:" + src)
+			}
 		}
 
 	}
@@ -46,6 +48,6 @@ type configParameters struct {
 }
 
 type export struct {
-	Port    string `mapstructure:"port"`
-	DataSrc string `mapstructure:"dataSrc"`
+	Port     string   `mapstructure:"port"`
+	DataSrcs []string `mapstructure:"dataSrcs"`
 }
