@@ -1,0 +1,6 @@
+# HELP dtct_UP TODO: docString
+# TYPE dtct_UP gauge
+dtct_UP{DevID="1003",DevNO="2101003",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1003",DevNO="2101003",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1003",DevNO="2101003",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+

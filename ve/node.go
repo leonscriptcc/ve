@@ -54,6 +54,7 @@ func (n *Node) Collect(ch chan<- prometheus.Metric) {
 
 type VirtualMetric struct {
 	FqName         string
+	Type           prometheus.ValueType
 	Help           string
 	VariableLabels []string
 	ConstLabels    prometheus.Labels
