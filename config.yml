@@ -4,5 +4,3 @@ exporters:
     port: "8080"
     dataSrcs:
       - "./data.txt"
-
-
