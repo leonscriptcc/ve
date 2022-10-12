@@ -17,6 +17,9 @@ func AnalyzeDataSrc(dataSrc string) (vm VirtualMetric, err error) {
 	}
 	defer file.Close()
 
+	// 初始化map
+	vm.ConstLabels = make(map[string]string, 1)
+
 	// 读取文件第三行
 	lineCount := 1
 	var content string
@@ -32,6 +35,10 @@ func AnalyzeDataSrc(dataSrc string) (vm VirtualMetric, err error) {
 	analyseData2Desc(content, &vm)
 
 	// 继续读取文件内容
+	for fileScanner.Scan() {
+		content = fileScanner.Text()
+		vm.Data = append(vm.Data, analyseData2Metric(content))
+	}
 	return vm, nil
 }
 

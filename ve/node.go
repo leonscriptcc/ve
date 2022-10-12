@@ -11,7 +11,7 @@ type Node struct {
 func NewNode(vms ...VirtualMetric) *Node {
 	// 参数声明
 	descs := make([]*prometheus.Desc, 0, len(vms))
-	metrics := make([]prometheus.Metric, len(vms))
+	metrics := make([]prometheus.Metric, 0, len(vms))
 	metricsMap := make(map[string][]prometheus.Metric, len(vms))
 
 	// 添加数据描述

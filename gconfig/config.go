@@ -31,23 +31,18 @@ func Load() error {
 	}
 
 	// 校验文件是否存在
-	for _, exporter := range Parameters.Exporters {
-		for _, src := range exporter.DataSrcs {
-			if !gtool.IsExist(src) {
-				return errors.New("dataSrc not exist:" + src)
-			}
-		}
-
+	if !gtool.IsExist(Parameters.Exporters.DataSrcs) {
+		return errors.New("dataSrc not exist:" + Parameters.Exporters.DataSrcs)
 	}
 	return nil
 }
 
 // configParameters 项目配置参数
 type configParameters struct {
-	Exporters []export `mapstructure:"exporters"`
+	Exporters export `mapstructure:"exporters"`
 }
 
 type export struct {
-	Port     string   `mapstructure:"port"`
-	DataSrcs []string `mapstructure:"dataSrcs"`
+	Num      int    `mapstructure:"num"`
+	DataSrcs string `mapstructure:"dataSrcs"`
 }
