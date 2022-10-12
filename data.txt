@@ -1,5 +1,13 @@
 # HELP dtct_UP TODO: docString
 # TYPE dtct_UP gauge
 dtct_UP{DevID="1003",DevNO="2101003",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
-dtct_UP{DevID="1003",DevNO="2101003",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
-dtct_UP{DevID="1003",DevNO="2101003",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1003",DevNO="2101004",DevType="1000",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1004",DevNO="2100025",DevType="1313",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1004",DevNO="2103026",DevType="1313",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 0
+dtct_UP{DevID="1004",DevNO="2300023",DevType="1313",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 0
+dtct_UP{DevID="1004",DevNO="2300027",DevType="1406",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 0
+dtct_UP{DevID="1004",DevNO="2302028",DevType="1406",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1004",DevNO="2303024",DevType="1313",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 0
+dtct_UP{DevID="1006",DevNO="2102031",DevType="3528",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="1009",DevNO="2301032",DevType="3311",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1
+dtct_UP{DevID="2001",DevNO="1900101",DevType="4449",MacID="12:41:4c:51:72:d3",Mod="PMM",Order="200309"} 1

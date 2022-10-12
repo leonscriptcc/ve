@@ -77,7 +77,7 @@ func analyseData2Metric(data string) (d Data) {
 	labels := strings.Split(labelContent, ",")
 	for _, label := range labels {
 		params = strings.Split(label, "=")
-		d.VlParams = append(d.VlParams, params[0])
+		d.VlParams = append(d.VlParams, params[1])
 
 	}
 
