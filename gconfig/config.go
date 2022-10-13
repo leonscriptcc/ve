@@ -8,6 +8,17 @@ import (
 
 var Parameters configParameters
 
+// configParameters 项目配置参数
+type configParameters struct {
+	Exporters export `mapstructure:"exporters"`
+}
+
+type export struct {
+	Num       int    `mapstructure:"num"`
+	StartPort int    `mapstructure:"startPort"`
+	DataSrcs  string `mapstructure:"dataSrcs"`
+}
+
 // Load 获取配置参数
 func Load() error {
 	//表示 先预加载匹配的环境变量
@@ -35,14 +46,4 @@ func Load() error {
 		return errors.New("dataSrc not exist:" + Parameters.Exporters.DataSrcs)
 	}
 	return nil
-}
-
-// configParameters 项目配置参数
-type configParameters struct {
-	Exporters export `mapstructure:"exporters"`
-}
-
-type export struct {
-	Num      int    `mapstructure:"num"`
-	DataSrcs string `mapstructure:"dataSrcs"`
 }

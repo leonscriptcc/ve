@@ -40,7 +40,7 @@ func main() {
 	)
 
 	// 端口初始化
-	port := 7090
+	port := gconfig.Parameters.Exporters.StartPort
 
 	// 启动http服务
 	for i := 0; i < gconfig.Parameters.Exporters.Num; i++ {
@@ -56,6 +56,9 @@ func main() {
 			log.Println(server.ListenAndServe())
 		}()
 	}
+
+	// 生成prometheus配置文件
+	ve.CreatePrometheusConfig()
 
 	select {}
 
